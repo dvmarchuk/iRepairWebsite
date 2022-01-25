@@ -1,0 +1,59 @@
+.img-size {
+  width: 230px;
+  /* You can set the dimensions to whatever you want */
+  height: 230px;
+  object-fit: contain;
+}
+
+div {
+  background-color: #e5e5e5;
+  /*background-color: yellow;*/
+}
+
+div:before {
+  background-color: #e5e5e5;
+}
+
+margin {
+  background-color: #e5e5e5;
+}
+
+.img-product-details {
+  width: 180px;
+  /* You can set the dimensions to whatever you want */
+  height: 180px;
+  object-fit: cover;
+}
+
+.card-formatting {
+  /*margin: 8px;*/
+  align-items: center;
+}
+
+.card {
+  border: transparent;
+}
+
+.card-img-repairs {
+  width: 200px;
+  /* You can set the dimensions to whatever you want */
+  height: 200px;
+  object-fit: contain;
+}
+
+.card-formatting-devices {
+  /*margin: 16px 8px;*/
+  align-items: center;
+}
+
+.card-formatting-repairs {
+  /*margin: 16px 8px;*/
+  align-items: center;
+  /*text-align: center;*/
+}
+
+.repair-info-div {
+  align-items: center;
+}
+
+/*# sourceMappingURL=app.component.css.map */

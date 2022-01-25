@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "irepair-47a64": {
+      "hosting": {
+        "iRepairSiteAngular": [
+          "irepair-47a64"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "irepair-47a64"
+  }
+}
