@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {IphoneInt} from "./devices/device";
+import {IpadInterface, IphoneInt} from "./devices/device";
 import {DeviceData} from "./devices/DeviceData";
 
 
@@ -19,7 +19,11 @@ export class AppComponent {
 
 
   iphones = [iphone13ProMax, iphone13Pro, iphone13, iphone13Mini, iphone12ProMax, iphone12Pro, iphone12, iphone12Mini, iphoneSE, iphone11Pro, iphone11, iphoneEtc];
-
+  ipads = [ipadPro112021]
+  androidPhones = [iphoneEtc]
+  androidTablets = [iphoneEtc]
+  computers = [iphoneEtc]
+  watches = [iphoneEtc]
 
   showRepairBool(){
     this.showRepair = !this.showRepair;
@@ -31,7 +35,14 @@ export class AppComponent {
 }
 
 
-
+let ipadPro112021: IpadInterface = {
+  deviceName: 'iPad Pro 11 inch 2021',
+  deviceImg: '',
+  repairId: '',
+  repair: [
+    {repairTitle: '', repairDetails: '', repairImg: '', repairPrice: ''}
+  ]
+}
 
 
 
@@ -44,12 +55,12 @@ let iphone13ProMax: IphoneInt = {
   deviceImg: 'assets/iphone/iphone13.png',
   repairId: 'Iphone13ProMax',
   repair: [
-    {repairTitle:'Screen', repairDetails: 'Original Apple OLED screen', repairImg: '',repairPrice: 999},
-    {repairTitle:'Rear Screen', repairImg: '',repairPrice: 995},
-    {repairTitle: 'Rear/Front Camera', repairImg: 'assets/iphone/camera2.png',repairPrice: 999},
-    {repairTitle:'Charger Port', repairImg: 'assets/iphone/chargerPort.png',repairPrice: 995},
-    {repairTitle:'Battery Replacement', repairImg: 'assets/iphone/battery3.png',repairPrice: 195},
-    {repairTitle: 'Other Repairs?',repairImg: 'assets/iphone/iphone13.png'},
+    {repairTitle:'Screen', repairDetails: 'Original Apple OLED screen', repairImg: 'assets/iphone/brokenScreen.png',repairPrice: '$995'},
+    {repairTitle:'Rear Screen', repairImg: 'assets/iphone/rearCrack.png',repairPrice: '$995'},
+    {repairTitle: 'Rear/Front Camera', repairImg: 'assets/iphone/camera2.png',repairPrice: '$995'},
+    {repairTitle:'Charger Port', repairImg: 'assets/iphone/chargerPort.png',repairPrice: '$995'},
+    {repairTitle:'Battery Replacement', repairImg: 'assets/iphone/battery3.png',repairPrice: '$195'},
+    {repairTitle: 'Other Repairs?',repairImg: 'assets/iphone/electriciphone.png'},
   ]
 };
 
@@ -58,12 +69,12 @@ let iphone13Pro: IphoneInt = {
   deviceImg: 'assets/iphone/iphone13.png',
   repairId: 'Iphone13Pro',
   repair: [
-    {repairTitle:'Screen', repairDetails: 'Original Apple OLED screen', repairImg: '',repairPrice: 999},
-    {repairTitle:'Rear Screen', repairImg: '',repairPrice: 995},
-    {repairTitle: 'Rear/Front Camera', repairImg: 'assets/iphone/camera2.png',repairPrice: 999},
-    {repairTitle:'Charger Port', repairImg: 'assets/iphone/chargerPort.png',repairPrice: 995},
-    {repairTitle:'Battery Replacement', repairImg: 'assets/iphone/battery3.png',repairPrice: 195},
-    {repairTitle: 'Other Repairs?',repairImg: 'assets/iphone/iphone13.png'},
+    {repairTitle:'Screen', repairDetails: 'Original Apple OLED screen', repairImg: 'assets/iphone/brokenScreen.png',repairPrice: '$995'},
+    {repairTitle:'Rear Screen', repairImg: 'assets/iphone/rearCrack.png',repairPrice: '$995'},
+    {repairTitle: 'Rear/Front Camera', repairImg: 'assets/iphone/camera2.png',repairPrice: '$995'},
+    {repairTitle:'Charger Port', repairImg: 'assets/iphone/chargerPort.png',repairPrice: '$995'},
+    {repairTitle:'Battery Replacement', repairImg: 'assets/iphone/battery3.png',repairPrice: '$195'},
+    {repairTitle: 'Other Repairs?',repairImg: 'assets/iphone/electriciphone.png'},
   ]
 };
 
@@ -72,12 +83,12 @@ let iphone13: IphoneInt = {
   deviceImg: 'assets/iphone/iphone13np.png',
   repairId: 'Iphone13',
   repair: [
-    {repairTitle:'Screen', repairDetails: 'Original Apple OLED screen', repairImg: '',repairPrice: 999},
-    {repairTitle:'Rear Screen', repairImg: '',repairPrice: 995},
-    {repairTitle: 'Rear/Front Camera', repairImg: 'assets/iphone/camera2.png',repairPrice: 999},
-    {repairTitle:'Charger Port', repairImg: 'assets/iphone/chargerPort.png',repairPrice: 995},
-    {repairTitle:'Battery Replacement', repairImg: 'assets/iphone/battery3.png',repairPrice: 195},
-    {repairTitle: 'Other Repairs?',repairImg: 'assets/iphone/iphone13.png'},
+    {repairTitle:'Screen', repairDetails: 'Original Apple OLED screen', repairImg: 'assets/iphone/brokenScreen.png',repairPrice: '$995'},
+    {repairTitle:'Rear Screen', repairImg: 'assets/iphone/rearCrack.png',repairPrice: '$995'},
+    {repairTitle: 'Rear/Front Camera', repairImg: 'assets/iphone/camera2.png',repairPrice: '$995'},
+    {repairTitle:'Charger Port', repairImg: 'assets/iphone/chargerPort.png',repairPrice: '$995'},
+    {repairTitle:'Battery Replacement', repairImg: 'assets/iphone/battery3.png',repairPrice: '$195'},
+    {repairTitle: 'Other Repairs?',repairImg: 'assets/iphone/electriciphone.png'},
   ]
 };
 
@@ -86,12 +97,12 @@ let iphone13Mini: IphoneInt = {
   deviceImg: 'assets/iphone/iphone13np.png',
   repairId: 'Iphone13Mini',
   repair: [
-    {repairTitle:'Screen', repairDetails: 'Original Apple OLED screen', repairImg: '',repairPrice: 999},
-    {repairTitle:'Rear Screen', repairImg: '',repairPrice: 995},
-    {repairTitle: 'Rear/Front Camera', repairImg: 'assets/iphone/camera2.png',repairPrice: 999},
-    {repairTitle:'Charger Port', repairImg: 'assets/iphone/chargerPort.png',repairPrice: 995},
-    {repairTitle:'Battery Replacement', repairImg: 'assets/iphone/battery3.png',repairPrice: 195},
-    {repairTitle: 'Other Repairs?',repairImg: 'assets/iphone/iphone13.png'},
+    {repairTitle:'Screen', repairDetails: 'Original Apple OLED screen', repairImg: 'assets/iphone/brokenScreen.png',repairPrice: '$995'},
+    {repairTitle:'Rear Screen', repairImg: 'assets/iphone/rearCrack.png',repairPrice: '$995'},
+    {repairTitle: 'Rear/Front Camera', repairImg: 'assets/iphone/camera2.png',repairPrice: '$995'},
+    {repairTitle:'Charger Port', repairImg: 'assets/iphone/chargerPort.png',repairPrice: '$995'},
+    {repairTitle:'Battery Replacement', repairImg: 'assets/iphone/battery3.png',repairPrice: '$195'},
+    {repairTitle: 'Other Repairs?',repairImg: 'assets/iphone/electriciphone.png'},
   ]
 };
 
@@ -100,12 +111,12 @@ let iphone12ProMax: IphoneInt = {
   deviceImg: 'assets/iphone/iphone12pro.png',
   repairId: 'Iphone12ProMax',
   repair: [
-    {repairTitle:'Screen', repairDetails: 'Original Apple OLED screen', repairImg: '',repairPrice: 999},
-    {repairTitle:'Rear Screen', repairImg: '',repairPrice: 995},
-    {repairTitle: 'Rear/Front Camera', repairImg: 'assets/iphone/camera2.png',repairPrice: 999},
-    {repairTitle:'Charger Port', repairImg: 'assets/iphone/chargerPort.png',repairPrice: 995},
-    {repairTitle:'Battery Replacement', repairImg: 'assets/iphone/battery3.png',repairPrice: 195},
-    {repairTitle: 'Other Repairs?',repairImg: 'assets/iphone/iphone13.png'},
+    {repairTitle:'Screen', repairDetails: 'Original Apple OLED screen', repairImg: 'assets/iphone/brokenScreen.png',repairPrice: '$995'},
+    {repairTitle:'Rear Screen', repairImg: 'assets/iphone/rearCrack.png',repairPrice: '$995'},
+    {repairTitle: 'Rear/Front Camera', repairImg: 'assets/iphone/camera2.png',repairPrice: '$995'},
+    {repairTitle:'Charger Port', repairImg: 'assets/iphone/chargerPort.png',repairPrice: '$995'},
+    {repairTitle:'Battery Replacement', repairImg: 'assets/iphone/battery3.png',repairPrice: '$195'},
+    {repairTitle: 'Other Repairs?',repairImg: 'assets/iphone/electriciphone.png'},
   ]
 };
 
@@ -114,12 +125,12 @@ let iphone12Pro: IphoneInt = {
   deviceImg: 'assets/iphone/iphone12pro.png',
   repairId: 'Iphone12Pro',
   repair: [
-    {repairTitle:'Screen', repairDetails: 'Original Apple OLED screen', repairImg: '',repairPrice: 999},
-    {repairTitle:'Rear Screen', repairImg: '',repairPrice: 995},
-    {repairTitle: 'Rear/Front Camera', repairImg: 'assets/iphone/camera2.png',repairPrice: 999},
-    {repairTitle:'Charger Port', repairImg: 'assets/iphone/chargerPort.png',repairPrice: 995},
-    {repairTitle:'Battery Replacement', repairImg: 'assets/iphone/battery3.png',repairPrice: 195},
-    {repairTitle: 'Other Repairs?',repairImg: 'assets/iphone/iphone13.png'},
+    {repairTitle:'Screen', repairDetails: 'Original Apple OLED screen', repairImg: 'assets/iphone/brokenScreen.png',repairPrice: '$995'},
+    {repairTitle:'Rear Screen', repairImg: 'assets/iphone/rearCrack.png',repairPrice: '$995'},
+    {repairTitle: 'Rear/Front Camera', repairImg: 'assets/iphone/camera2.png',repairPrice: '$995'},
+    {repairTitle:'Charger Port', repairImg: 'assets/iphone/chargerPort.png',repairPrice: '$995'},
+    {repairTitle:'Battery Replacement', repairImg: 'assets/iphone/battery3.png',repairPrice: '$195'},
+    {repairTitle: 'Other Repairs?',repairImg: 'assets/iphone/electriciphone.png'},
   ]
 };
 
@@ -128,12 +139,12 @@ let iphone12: IphoneInt = {
   deviceImg: 'assets/iphone/iphone12.png',
   repairId: 'Iphone12',
   repair: [
-    {repairTitle:'Screen', repairDetails: 'Original Apple OLED screen', repairImg: '',repairPrice: 999},
-    {repairTitle:'Rear Screen', repairImg: '',repairPrice: 995},
-    {repairTitle: 'Rear/Front Camera', repairImg: 'assets/iphone/camera2.png',repairPrice: 999},
-    {repairTitle:'Charger Port', repairImg: 'assets/iphone/chargerPort.png',repairPrice: 995},
-    {repairTitle:'Battery Replacement', repairImg: 'assets/iphone/battery3.png',repairPrice: 195},
-    {repairTitle: 'Other Repairs?',repairImg: 'assets/iphone/iphone13.png'},
+    {repairTitle:'Screen', repairDetails: 'Original Apple OLED screen', repairImg: 'assets/iphone/brokenScreen.png',repairPrice: '$995'},
+    {repairTitle:'Rear Screen', repairImg: 'assets/iphone/rearCrack.png',repairPrice: '$995'},
+    {repairTitle: 'Rear/Front Camera', repairImg: 'assets/iphone/camera2.png',repairPrice: '$995'},
+    {repairTitle:'Charger Port', repairImg: 'assets/iphone/chargerPort.png',repairPrice: '$995'},
+    {repairTitle:'Battery Replacement', repairImg: 'assets/iphone/battery3.png',repairPrice: '$195'},
+    {repairTitle: 'Other Repairs?',repairImg: 'assets/iphone/electriciphone.png'},
   ]
 };
 
@@ -142,12 +153,12 @@ let iphone12Mini: IphoneInt = {
   deviceImg: 'assets/iphone/iphone12.png',
   repairId: 'Iphone12Mini',
   repair: [
-    {repairTitle:'Screen', repairDetails: 'Original Apple OLED screen', repairImg: '',repairPrice: 999},
-    {repairTitle:'Rear Screen', repairImg: '',repairPrice: 995},
-    {repairTitle: 'Rear/Front Camera', repairImg: 'assets/iphone/camera2.png',repairPrice: 999},
-    {repairTitle:'Charger Port', repairImg: 'assets/iphone/chargerPort.png',repairPrice: 995},
-    {repairTitle:'Battery Replacement', repairImg: 'assets/iphone/battery3.png',repairPrice: 195},
-    {repairTitle: 'Other Repairs?',repairImg: 'assets/iphone/iphone13.png'},
+    {repairTitle:'Screen', repairDetails: 'Original Apple OLED screen', repairImg: 'assets/iphone/brokenScreen.png',repairPrice: '$995'},
+    {repairTitle:'Rear Screen', repairImg: 'assets/iphone/rearCrack.png',repairPrice: '$995'},
+    {repairTitle: 'Rear/Front Camera', repairImg: 'assets/iphone/camera2.png',repairPrice: '$995'},
+    {repairTitle:'Charger Port', repairImg: 'assets/iphone/chargerPort.png',repairPrice: '$995'},
+    {repairTitle:'Battery Replacement', repairImg: 'assets/iphone/battery3.png',repairPrice: '$195'},
+    {repairTitle: 'Other Repairs?',repairImg: 'assets/iphone/electriciphone.png'},
   ]
 };
 
@@ -156,12 +167,12 @@ let iphoneSE: IphoneInt = {
   deviceImg: 'assets/iphone/iphoneSE.png',
   repairId: 'IphoneSE',
   repair: [
-    {repairTitle:'Screen', repairDetails: 'Original Apple OLED screen', repairImg: '',repairPrice: 999},
-    {repairTitle:'Rear Screen', repairImg: '',repairPrice: 995},
-    {repairTitle: 'Rear/Front Camera', repairImg: 'assets/iphone/camera2.png',repairPrice: 999},
-    {repairTitle:'Charger Port', repairImg: 'assets/iphone/chargerPort.png',repairPrice: 995},
-    {repairTitle:'Battery Replacement', repairImg: 'assets/iphone/battery3.png',repairPrice: 195},
-    {repairTitle: 'Other Repairs?',repairImg: 'assets/iphone/iphone13.png'},
+    {repairTitle:'Screen', repairDetails: 'Original Apple OLED screen', repairImg: 'assets/iphone/brokenScreen.png',repairPrice: '$995'},
+    {repairTitle:'Rear Screen', repairImg: 'assets/iphone/rearCrack.png',repairPrice: '$995'},
+    {repairTitle: 'Rear/Front Camera', repairImg: 'assets/iphone/camera2.png',repairPrice: '$995'},
+    {repairTitle:'Charger Port', repairImg: 'assets/iphone/chargerPort.png',repairPrice: '$995'},
+    {repairTitle:'Battery Replacement', repairImg: 'assets/iphone/battery3.png',repairPrice: '$195'},
+    {repairTitle: 'Other Repairs?',repairImg: 'assets/iphone/electriciphone.png'},
   ]
 };
 
@@ -170,12 +181,12 @@ let iphone11Pro: IphoneInt = {
   deviceImg: 'assets/iphone/iphone11pro.png',
   repairId: 'Iphone11Pro',
   repair: [
-    {repairTitle:'Screen', repairDetails: 'Original Apple OLED screen', repairImg: '',repairPrice: 999},
-    {repairTitle:'Rear Screen', repairImg: '',repairPrice: 995},
-    {repairTitle: 'Rear/Front Camera', repairImg: 'assets/iphone/camera2.png',repairPrice: 999},
-    {repairTitle:'Charger Port', repairImg: 'assets/iphone/chargerPort.png',repairPrice: 995},
-    {repairTitle:'Battery Replacement', repairImg: 'assets/iphone/battery3.png',repairPrice: 195},
-    {repairTitle: 'Other Repairs?',repairImg: 'assets/iphone/iphone13.png'},
+    {repairTitle:'Screen', repairDetails: 'Original Apple OLED screen', repairImg: 'assets/iphone/brokenScreen.png',repairPrice: '$995'},
+    {repairTitle:'Rear Screen', repairImg: 'assets/iphone/rearCrack.png',repairPrice: '$995'},
+    {repairTitle: 'Rear/Front Camera', repairImg: 'assets/iphone/camera2.png',repairPrice: '$995'},
+    {repairTitle:'Charger Port', repairImg: 'assets/iphone/chargerPort.png',repairPrice: '$995'},
+    {repairTitle:'Battery Replacement', repairImg: 'assets/iphone/battery3.png',repairPrice: '$195'},
+    {repairTitle: 'Other Repairs?',repairImg: 'assets/iphone/electriciphone.png'},
   ]
 };
 
@@ -184,12 +195,12 @@ let iphone11: IphoneInt = {
   deviceImg: 'assets/iphone/iphone_11.png',
   repairId: 'Iphone11',
   repair: [
-    {repairTitle:'Screen', repairDetails: 'Original Apple OLED screen', repairImg: '',repairPrice: 999},
-    {repairTitle:'Rear Screen', repairImg: '',repairPrice: 995},
-    {repairTitle: 'Rear/Front Camera', repairImg: 'assets/iphone/camera2.png',repairPrice: 999},
-    {repairTitle:'Charger Port', repairImg: 'assets/iphone/chargerPort.png',repairPrice: 995},
-    {repairTitle:'Battery Replacement', repairImg: 'assets/iphone/battery3.png',repairPrice: 195},
-    {repairTitle: 'Other Repairs?',repairImg: 'assets/iphone/iphone13.png'},
+    {repairTitle:'Screen', repairDetails: 'Original Apple OLED screen', repairImg: 'assets/iphone/brokenScreen.png',repairPrice: '$995'},
+    {repairTitle:'Rear Screen', repairImg: 'assets/iphone/rearCrack.png',repairPrice: '$995'},
+    {repairTitle: 'Rear/Front Camera', repairImg: 'assets/iphone/camera2.png',repairPrice: '$995'},
+    {repairTitle:'Charger Port', repairImg: 'assets/iphone/chargerPort.png',repairPrice: '$995'},
+    {repairTitle:'Battery Replacement', repairImg: 'assets/iphone/battery3.png',repairPrice: '$195'},
+    {repairTitle: 'Other Repairs?',repairImg: 'assets/iphone/electriciphone.png'},
   ]
 };
 
@@ -198,11 +209,11 @@ let iphoneEtc: IphoneInt = {
   deviceImg: 'assets/iphone/iphone-x-png-29472.png',
   repairId: 'IphoneEtc',
   repair: [
-    {repairTitle:'Screen', repairDetails: 'Original Apple OLED screen', repairImg: '',repairPrice: 999},
-    {repairTitle:'Rear Screen', repairImg: '',repairPrice: 995},
-    {repairTitle: 'Rear/Front Camera', repairImg: 'assets/iphone/camera2.png',repairPrice: 999},
-    {repairTitle:'Charger Port', repairImg: 'assets/iphone/chargerPort.png',repairPrice: 995},
-    {repairTitle:'Battery Replacement', repairImg: 'assets/iphone/battery3.png',repairPrice: 195},
-    {repairTitle: 'Other Repairs?',repairImg: 'assets/iphone/iphone13.png'},
+    {repairTitle:'Screen', repairDetails: 'Original Apple OLED screen', repairImg: 'assets/iphone/brokenScreen.png',repairPrice: '$995'},
+    {repairTitle:'Rear Screen', repairImg: 'assets/iphone/rearCrack.png',repairPrice: '$995'},
+    {repairTitle: 'Rear/Front Camera', repairImg: 'assets/iphone/camera2.png',repairPrice: '$995'},
+    {repairTitle:'Charger Port', repairImg: 'assets/iphone/chargerPort.png',repairPrice: '$995'},
+    {repairTitle:'Battery Replacement', repairImg: 'assets/iphone/battery3.png',repairPrice: '$195'},
+    {repairTitle: 'Other Repairs?',repairImg: 'assets/iphone/electriciphone.png'},
   ]
 };

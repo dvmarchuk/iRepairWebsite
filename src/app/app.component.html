@@ -1,13 +1,13 @@
 <body style="background-color: #e5e5e5">
 <div style="background-color: #e5e5e5">
 <div style="height: 100vh;  background-image: url('https://mdbcdn.b-cdn.net/img/Photos/Others/images/76.webp');"   class="bg-image">
-  <nav class="navbar navbar-expand-sm navbar-light bg-light" >
+  <nav class="navbar navbar-expand-sm navbar-light bg-light " >
     <div class="container-fluid" style="background-color: transparent !important;">
       <a class="navbar-brand" href="#">iRepair</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div style="background-color: transparent !important;" class="collapse navbar-collapse" id="navbarSupportedContent" >
+      <div style="background-color: transparent !important;" class="collapse navbar-collapse " id="navbarSupportedContent" >
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
             <a class="nav-link" href="#repair">Repair</a>
@@ -31,7 +31,7 @@
       </div>
     </div>
   </nav>
-  <div style="background-color: transparent !important;" class="text-center position-absolute top-50 start-50 translate-middle" >
+  <div style="background-color: transparent !important; padding-top: 240px" class="text-center position-absolute top-50 start-50 translate-middle" >
     <h1>iRepair</h1>
     <h4>Your Ultimate Source for iPhone, iPod, iPad, and Mac Repair.</h4>
     <a class="btn" href="#repair">Repair</a>
@@ -125,18 +125,30 @@
 
 <!--      REPAIR DATA-->
      <div class=" img-fluid repair-info-div card-formatting-devices collapse justify-content-center" style="padding-bottom: 20vh" id="{{iphone.repairId}}">
-      <h3 class="card-title " style="padding-bottom: 48px; padding-top: 24px">{{iphone.deviceName}} Repair Cost:</h3>
+      <h3 class="card-title " style="padding-bottom: 48px; padding-top: 24px">{{iphone.deviceName}} Repair Cost: <p style="font-size: medium">Select repair</p></h3>
+
       <div class="row justify-content-center">
         <div *ngFor="let repair of iphone.repair"  class="card-formatting-repairs card col-md-6 col-lg-4 col-xl col-12 text-center">
           <img src="{{repair.repairImg}}" class="card-img-repairs card-img-top img-fluid " alt="...">
           <div class="card-body ">
-            <h5 class="card-title">{{repair.repairTitle}} ${{repair.repairPrice}}</h5>
+            <h5 class="card-title">{{repair.repairTitle}} {{repair.repairPrice}}</h5>
             <p>{{repair.repairDetails}}</p>
-            <a class="btn"><a class="nav-link active stretched-link" aria-current="page" href="sms:+15404215581&body=Hi! I would like to get my {{repair.repairTitle}}. Can I schedule an appointment?"></a></a>
+            <a class="btn"><a class="nav-link active stretched-link" aria-current="page" href="sms:+15404215581&body=Hi! I would like to get my {{repair.repairTitle}} replaced. Can I schedule an appointment?"></a></a>
           </div>
         </div>
       </div>
+
+       <p></p>
+       <p></p>
+       <div class="justify-content-evenly">
+         <h3 style="padding-bottom: 16px">Schedule your service!</h3>
+         <button style="margin-right: 8px; font-size: large" class="btn btn-outline-secondary"><a class="nav-link active" aria-current="page" href="tel:+15404215581">Call</a></button>
+         <button style=" font-size: large" class="btn btn-outline-dark"><a class="nav-link active" aria-current="page" href="sms:+15404215581">Text</a></button>
+       </div>
+       <hr style="background-color: black; margin-top: 24px">
+
     </div>
+
   </ng-container>
 
   </div>
@@ -150,31 +162,36 @@
 
 
     <!--  Ipad Repair-->
-    <div class="collapse img-fluid dropdown row justify-content-evenly" id="ipadRepair">
-      <div class="card col-sm text-center">
-        <img src="https://cdn.cnn.com/cnnnext/dam/assets/201210161739-laptop-lead.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <p class="card-text">iPad</p>
+    <div class="px-lg-5 collapse justify-content-center row dropdown img-fluid" style=" padding-top: 48px" id="ipadRepair">
+      <h1 style="padding-bottom: 96px">Select iPad</h1>
+
+      <!--    Iteration for device-->
+      <ng-container *ngFor="let ipad of ipads" >
+        <div class="card-formatting-devices card col-6 col-md-3 text-center">
+          <img src="{{ipad.deviceImg}}" class="img-product-details card-img-top" alt="...">
+          <div class="card-body">
+            <button class="btn card-text stretched-link" type="button" data-bs-toggle="collapse" [attr.data-bs-target]="'#' + ipad.repairId">
+              {{ipad.deviceName}}
+            </button>
+          </div>
         </div>
-      </div>
-      <div class="card col-sm text-center">
-        <img src="https://cdn.cnn.com/cnnnext/dam/assets/201210161739-laptop-lead.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <p class="card-text">iPad Mini</p>
+
+        <!--      REPAIR DATA-->
+        <div class=" img-fluid repair-info-div card-formatting-devices collapse justify-content-center" style="padding-bottom: 20vh" id="{{ipad.repairId}}">
+          <h3 class="card-title " style="padding-bottom: 48px; padding-top: 24px">{{ipad.deviceName}} Repair Cost: <p style="font-size: medium">Select repair</p></h3>
+
+          <div class="row justify-content-center">
+            <div *ngFor="let repair of ipad.repair"  class="card-formatting-repairs card col-md-6 col-lg-4 col-xl col-12 text-center">
+              <img src="{{repair.repairImg}}" class="card-img-repairs card-img-top img-fluid " alt="...">
+              <div class="card-body ">
+                <h5 class="card-title">{{repair.repairTitle}} {{repair.repairPrice}}</h5>
+                <p>{{repair.repairDetails}}</p>
+                <a class="btn"><a class="nav-link active stretched-link" aria-current="page" href="sms:+15404215581&body=Hi! I would like to get my {{repair.repairTitle}} replaced. Can I schedule an appointment?"></a></a>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-      <div class="card col-sm text-center">
-        <img src="https://cdn.cnn.com/cnnnext/dam/assets/201210161739-laptop-lead.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <p class="card-text">iPad Pro</p>
-        </div>
-      </div>
-      <div class="card col-sm text-center">
-        <img src="https://cdn.cnn.com/cnnnext/dam/assets/201210161739-laptop-lead.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <p class="card-text">iPad Air</p>
-        </div>
-      </div>
+      </ng-container>
     </div>
 
 
@@ -184,135 +201,193 @@
   <!--
 
 
-  ANDROID REPAIR
+  ANDROID PHONE REPAIR
 
 
   -->
-    <div class="collapse justify-content-evenly row dropdown img-fluid " id="AndroidRepair">
-      <div class="card col-sm text-center">
-        <img src="https://cdn.cnn.com/cnnnext/dam/assets/201210161739-laptop-lead.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <p class="card-text">Samsung</p>
+    <div class="px-lg-5 collapse justify-content-center row dropdown img-fluid" style=" padding-top: 48px" id="AndroidRepair">
+      <h1 style="padding-bottom: 96px">Select Phone</h1>
+
+      <!--    Iteration for device-->
+      <ng-container *ngFor="let android of androidPhones" >
+        <div class="card-formatting-devices card col-6 col-md-3 text-center">
+          <img src="{{android.deviceImg}}" class="img-product-details card-img-top" alt="...">
+          <div class="card-body">
+            <button class="btn card-text stretched-link" type="button" data-bs-toggle="collapse" [attr.data-bs-target]="'#' + android.repairId">
+              {{android.deviceName}}
+            </button>
+          </div>
         </div>
-      </div>
-      <div class="card col-sm text-center">
-        <img src="https://cdn.cnn.com/cnnnext/dam/assets/201210161739-laptop-lead.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <p class="card-text">Google Pixel</p>
+
+        <!--      REPAIR DATA-->
+        <div class=" img-fluid repair-info-div card-formatting-devices collapse justify-content-center" style="padding-bottom: 20vh" id="{{android.repairId}}">
+          <h3 class="card-title " style="padding-bottom: 48px; padding-top: 24px">{{android.deviceName}} Repair Cost: <p style="font-size: medium">Select repair</p></h3>
+
+          <div class="row justify-content-center">
+            <div *ngFor="let repair of android.repair"  class="card-formatting-repairs card col-md-6 col-lg-4 col-xl col-12 text-center">
+              <img src="{{repair.repairImg}}" class="card-img-repairs card-img-top img-fluid " alt="...">
+              <div class="card-body ">
+                <h5 class="card-title">{{repair.repairTitle}} {{repair.repairPrice}}</h5>
+                <p>{{repair.repairDetails}}</p>
+                <a class="btn"><a class="nav-link active stretched-link" aria-current="page" href="sms:+15404215581&body=Hi! I would like to get my {{repair.repairTitle}} replaced. Can I schedule an appointment?"></a></a>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-      <div class="card col-sm text-center">
-        <img src="https://cdn.cnn.com/cnnnext/dam/assets/201210161739-laptop-lead.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <p class="card-text">Motorola</p>
+      </ng-container>
+    </div>
+
+
+
+
+<!--
+
+ANDROID IPAD REPAIR
+
+-->
+    <div class="px-lg-5 collapse justify-content-center row dropdown img-fluid" style=" padding-top: 48px" id="AndroidTabletRepair">
+      <h1 style="padding-bottom: 96px">Select Tablet</h1>
+
+      <!--    Iteration for device-->
+      <ng-container *ngFor="let androidTablet of androidTablets" >
+        <div class="card-formatting-devices card col-6 col-md-3 text-center">
+          <img src="{{androidTablet.deviceImg}}" class="img-product-details card-img-top" alt="...">
+          <div class="card-body">
+            <button class="btn card-text stretched-link" type="button" data-bs-toggle="collapse" [attr.data-bs-target]="'#' + androidTablet.repairId">
+              {{androidTablet.deviceName}}
+            </button>
+          </div>
         </div>
-      </div>
-      <div class="card col-sm text-center">
-        <img src="https://cdn.cnn.com/cnnnext/dam/assets/201210161739-laptop-lead.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <p class="card-text">LG</p>
+
+        <!--      REPAIR DATA-->
+        <div class=" img-fluid repair-info-div card-formatting-devices collapse justify-content-center" style="padding-bottom: 20vh" id="{{androidTablet.repairId}}">
+          <h3 class="card-title " style="padding-bottom: 48px; padding-top: 24px">{{androidTablet.deviceName}} Repair Cost: <p style="font-size: medium">Select repair</p></h3>
+
+          <div class="row justify-content-center">
+            <div *ngFor="let repair of androidTablet.repair"  class="card-formatting-repairs card col-md-6 col-lg-4 col-xl col-12 text-center">
+              <img src="{{repair.repairImg}}" class="card-img-repairs card-img-top img-fluid " alt="...">
+              <div class="card-body ">
+                <h5 class="card-title">{{repair.repairTitle}} {{repair.repairPrice}}</h5>
+                <p>{{repair.repairDetails}}</p>
+                <a class="btn"><a class="nav-link active stretched-link" aria-current="page" href="sms:+15404215581&body=Hi! I would like to get my {{repair.repairTitle}} replaced. Can I schedule an appointment?"></a></a>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
+      </ng-container>
     </div>
 
 
 
 
   <!--Mac/PC Repair-->
-    <div class="collapse justify-content-evenly row dropdown img-fluid " id="PcRepair">
-      <div class="card col-sm col-3 text-center">
-        <img src="https://cdn.cnn.com/cnnnext/dam/assets/201210161739-laptop-lead.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <p class="card-text">Windows</p>
+    <div class="px-lg-5 collapse justify-content-center row dropdown img-fluid" style=" padding-top: 48px" id="PcRepair">
+      <h1 style="padding-bottom: 96px">Select Computer</h1>
+
+      <!--    Iteration for device-->
+      <ng-container *ngFor="let computer of computers" >
+        <div class="card-formatting-devices card col-6 col-md-3 text-center">
+          <img src="{{computer.deviceImg}}" class="img-product-details card-img-top" alt="...">
+          <div class="card-body">
+            <button class="btn card-text stretched-link" type="button" data-bs-toggle="collapse" [attr.data-bs-target]="'#' + computer.repairId">
+              {{computer.deviceName}}
+            </button>
+          </div>
         </div>
-      </div>
-      <div class="card col-sm col-3 text-center">
-        <img src="https://www.backmarket.com/cdn-cgi/image/format=auto,quality=75,width=1920/https://d28i4xct2kl5lp.cloudfront.net/product_images/125752_bd22b183-a697-42ca-a63f-8e749af29ae7.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <button class="btn   card-text stretched-link" type="button" data-bs-toggle="collapse" data-bs-target="#MacOptions" aria-expanded="false" aria-controls="collapseExample">
-            Mac
-          </button>
+
+        <!--      REPAIR DATA-->
+        <div class=" img-fluid repair-info-div card-formatting-devices collapse justify-content-center" style="padding-bottom: 20vh" id="{{computer.repairId}}">
+          <h3 class="card-title " style="padding-bottom: 48px; padding-top: 24px">{{computer.deviceName}} Repair Cost: <p style="font-size: medium">Select repair</p></h3>
+
+          <div class="row justify-content-center">
+            <div *ngFor="let repair of computer.repair"  class="card-formatting-repairs card col-md-6 col-lg-4 col-xl col-12 text-center">
+              <img src="{{repair.repairImg}}" class="card-img-repairs card-img-top img-fluid " alt="...">
+              <div class="card-body ">
+                <h5 class="card-title">{{repair.repairTitle}} {{repair.repairPrice}}</h5>
+                <p>{{repair.repairDetails}}</p>
+                <a class="btn"><a class="nav-link active stretched-link" aria-current="page" href="sms:+15404215581&body=Hi! I would like to get my {{repair.repairTitle}} replaced. Can I schedule an appointment?"></a></a>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
+      </ng-container>
     </div>
 
 
-  <!--  mac options-->
-    <div class="collapse justify-content-evenly row dropdown img-fluid " id="MacOptions">
-      <div class="card col-sm col-3 text-center">
-        <img src="https://cdn.cnn.com/cnnnext/dam/assets/201210161739-laptop-lead.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <p class="card-text">Macbook Pro</p>
-        </div>
-      </div>
-      <div class="card col-sm col-3 text-center">
-        <img src="https://www.backmarket.com/cdn-cgi/image/format=auto,quality=75,width=1920/https://d28i4xct2kl5lp.cloudfront.net/product_images/125752_bd22b183-a697-42ca-a63f-8e749af29ae7.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <button class="btn   card-text stretched-link" type="button" data-bs-toggle="collapse" data-bs-target="#WatchRepair" aria-expanded="false" aria-controls="collapseExample">
-            Macbook Air
-          </button>
-        </div>
-      </div>
-    </div>
 
 
 
 
   <!--Watch Repair-->
-    <div class="collapse justify-content-evenly row dropdown img-fluid " id="WatchRepair">
-      <div class="card col-sm text-center">
-        <img src="https://cdn.cnn.com/cnnnext/dam/assets/201210161739-laptop-lead.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <p class="card-text">Apple Watch</p>
+    <div class="px-lg-5 collapse justify-content-center row dropdown img-fluid" style=" padding-top: 48px" id="WatchRepair">
+      <h1 style="padding-bottom: 96px">Select Watch</h1>
+
+      <!--    Iteration for device-->
+      <ng-container *ngFor="let watch of watches" >
+        <div class="card-formatting-devices card col-6 col-md-3 text-center">
+          <img src="{{watch.deviceImg}}" class="img-product-details card-img-top" alt="...">
+          <div class="card-body">
+            <button class="btn card-text stretched-link" type="button" data-bs-toggle="collapse" [attr.data-bs-target]="'#' + watch.repairId">
+              {{watch.deviceName}}
+            </button>
+          </div>
         </div>
-      </div>
-      <div class="card col-sm text-center">
-        <img src="https://cdn.cnn.com/cnnnext/dam/assets/201210161739-laptop-lead.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <p class="card-text">Samsung Watch</p>
+
+        <!--      REPAIR DATA-->
+        <div class=" img-fluid repair-info-div card-formatting-devices collapse justify-content-center" style="padding-bottom: 20vh" id="{{watch.repairId}}">
+          <h3 class="card-title " style="padding-bottom: 48px; padding-top: 24px">{{watch.deviceName}} Repair Cost: <p style="font-size: medium">Select repair</p></h3>
+
+          <div class="row justify-content-center">
+            <div *ngFor="let repair of watch.repair"  class="card-formatting-repairs card col-md-6 col-lg-4 col-xl col-12 text-center">
+              <img src="{{repair.repairImg}}" class="card-img-repairs card-img-top img-fluid " alt="...">
+              <div class="card-body ">
+                <h5 class="card-title">{{repair.repairTitle}} {{repair.repairPrice}}</h5>
+                <p>{{repair.repairDetails}}</p>
+                <a class="btn"><a class="nav-link active stretched-link" aria-current="page" href="sms:+15404215581&body=Hi! I would like to get my {{repair.repairTitle}} replaced. Can I schedule an appointment?"></a></a>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-      <div class="card col-sm text-center">
-        <img src="https://cdn.cnn.com/cnnnext/dam/assets/201210161739-laptop-lead.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <p class="card-text">Motorola Watch</p>
-        </div>
-      </div>
+      </ng-container>
     </div>
+
+
   </div>
 </div>
 
 
+<!--DEVICES For SALE-->
+<div class="text-center static-bottom" style="padding-top: 5000px">
+  <div id="purchase"  >
+    <h3>Devices for Sale</h3>
+    <br>
+    <p>Looking for a quality used phone? Look no further than iRepair! We sell new and quality used phones and iPads. Devices in stock are available for immediate pickup.</p>
+    <p>Looking for something we don't have listed? We can order certain devices just for you!</p>
+    <p>With unbeatable prices and service, choose us for your next Smart device!</p>
+    <p>Call us today to see if we have the iPhone, iPad, Android, or computer you are searching for</p>
+  </div>
 
+  <div style="margin-top: 160px" id="aboutUs">
+    <h3>About Us</h3>
+    <p>We are a locally owned and operated iPhone repair shop that started back in 2014. We have qualified technicians that are
+      happy to assist you and repair your device</p>
+  </div>
 
-<!--&lt;!&ndash;DEVICES For SALE&ndash;&gt;-->
-<!--<div style="margin-top: 5000px">-->
-<!--  <div id="purchase" style="height: 100vh" class="text-center">-->
-<!--    <h1>Devices for Sale</h1>-->
-<!--    <br>-->
-<!--    <h5>Looking for a quality used phone? Look no further than iRepair! We sell new and quality used phones and iPads. Devices in stock are available for immediate pickup.</h5>-->
-<!--    <h5>Looking for something we don't have listed? We can order certain devices just for you!</h5>-->
-<!--    <h5>With unbeatable prices and service, choose us for your next Smart device!</h5>-->
-<!--    <h5>Call us today to see if we have the iPhone, iPad, Android, or computer you are searching for</h5>-->
-<!--  </div>-->
+  <div style="margin-top: 160px" id="contact">
+    <h3>Contact</h3>
+    <p>Have a question? Need help? Get in touch with us by calling, stopping by</p>
+    <p></p>
+    <p></p>
+    <div class="justify-content-evenly">
+      <button style="margin-right: 8px; font-size: large" class="btn btn-outline-secondary"><a class="nav-link active" aria-current="page" href="tel:+15404215581">Call</a></button>
+      <button style=" font-size: large" class="btn btn-outline-dark"><a class="nav-link active" aria-current="page" href="sms:+15404215581">Text</a></button>
+    </div>
+  </div>
 
-<!--  <div id="aboutUs">-->
-<!--    <h5>About Us</h5>-->
-<!--    We are a locally owned and operated iPhone repair shop that started back in 2014. We have qualified technicians that are-->
-<!--    happy to assist you and repair your device-->
-<!--  </div>-->
-
-<!--  <div id="contact">-->
-<!--    <h5>Contact</h5>-->
-<!--    <h3>Have a question? Need help? Get in touch with us by calling, stopping by</h3>-->
-<!--    Phone-->
-<!--    email-->
-<!--  </div>-->
-
-<!--  <div id="location">-->
-<!--    <h5>Location</h5>-->
-<!--  </div>-->
-<!--</div>-->
+  <div style="margin-top: 160px" id="location">
+    <h3>Location</h3>
+  </div>
+</div>
 </div>
 </body>
 
