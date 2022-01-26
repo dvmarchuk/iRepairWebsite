@@ -31,7 +31,7 @@
       </div>
     </div>
   </nav>
-  <div style="background-color: transparent !important; padding-top: 240px" class="text-center position-absolute top-50 start-50 translate-middle" >
+  <div style="background-color: transparent !important; padding-top: 24px" class="text-center position-absolute top-50 start-50 translate-middle" >
     <h1>iRepair</h1>
     <h4>Your Ultimate Source for iPhone, iPod, iPad, and Mac Repair.</h4>
     <a class="btn" href="#repair">Repair</a>
@@ -40,7 +40,7 @@
 </div>
 
 <div id="repair" class="container" style=" padding-top: 24px; height: 50vh; text-align: center" >
-  <h1>Device Repair</h1>
+  <h1>DevicesInterface Repair</h1>
   <p></p>
   <h5 style="padding-bottom: 96px">All your electronics are welcome! We have the tool and expertize your device needs.</h5>
   <!--  device repair option-->
@@ -103,7 +103,7 @@
 </div>
 
 
-<!--Device show hide panels-->
+<!--DevicesInterface show hide panels-->
   <div style="height: 50vh" class="container-fluid">
 
 
@@ -113,11 +113,11 @@
   <h1 style="padding-bottom: 96px">Select iPhone</h1>
 
 <!--    Iteration for device-->
-  <ng-container *ngFor="let iphone of iphones" >
-     <div class="card-formatting-devices card col-6 col-md-3 text-center">
+  <ng-container *ngFor="let iphone of iphones"  >
+     <div class="card-formatting-devices card col-6 col-md-3 text-center" data-bs-parent="iphoneRepair">
       <img src="{{iphone.deviceImg}}" class="img-product-details card-img-top" alt="...">
        <div class="card-body">
-      <button class="btn card-text stretched-link" type="button" data-bs-toggle="collapse" [attr.data-bs-target]="'#' + iphone.repairId">
+      <button class="btn card-text stretched-link" type="button" data-bs-parent="#myGroup" data-bs-toggle="collapse" [attr.data-bs-target]="'#' + iphone.repairId">
         {{iphone.deviceName}}
       </button>
      </div>
@@ -125,7 +125,7 @@
 
 <!--      REPAIR DATA-->
      <div class=" img-fluid repair-info-div card-formatting-devices collapse justify-content-center" style="padding-bottom: 20vh" id="{{iphone.repairId}}">
-      <h3 class="card-title " style="padding-bottom: 48px; padding-top: 24px">{{iphone.deviceName}} Repair Cost: <p style="font-size: medium">Select repair</p></h3>
+      <h3 class="card-title " style="padding: 48px 0 48px 0;">{{iphone.deviceName}} Repair Cost: <p style="font-size: medium">Select the repair you are interested in to schedule an appointment!</p></h3>
 
       <div class="row justify-content-center">
         <div *ngFor="let repair of iphone.repair"  class="card-formatting-repairs card col-md-6 col-lg-4 col-xl col-12 text-center">
@@ -213,7 +213,7 @@
         <div class="card-formatting-devices card col-6 col-md-3 text-center">
           <img src="{{android.deviceImg}}" class="img-product-details card-img-top" alt="...">
           <div class="card-body">
-            <button class="btn card-text stretched-link" type="button" data-bs-toggle="collapse" [attr.data-bs-target]="'#' + android.repairId">
+            <button class="btn card-text stretched-link" type="button" (click)="test()" data-bs-toggle="collapse" [attr.data-bs-target]="'#' + android.repairId">
               {{android.deviceName}}
             </button>
           </div>
@@ -357,7 +357,7 @@ ANDROID IPAD REPAIR
 
 
 <!--DEVICES For SALE-->
-<div class="text-center static-bottom" style="padding-top: 5000px">
+<div class="text-center " style="padding-top: 5000px">
   <div id="purchase"  >
     <h3>Devices for Sale</h3>
     <br>
@@ -384,8 +384,13 @@ ANDROID IPAD REPAIR
     </div>
   </div>
 
-  <div style="margin-top: 160px" id="location">
+  <div class="position-relative" style="margin-top: 160px" id="location">
     <h3>Location</h3>
+    <div class=" mapouter" style="">
+<!--      position-absolute top-75 start-50-->
+        <iframe width="100%" height="500px" id="gmap_canvas" src="https://maps.google.com/maps?q=924%20S%20High%20St,%20Harrisonburg,%20VA%2022801&t=&z=15&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+<!--        <style>.mapouter{text-align:center;height:350px;width:350px;}</style>-->
+    </div>
   </div>
 </div>
 </div>

@@ -1,5 +1,7 @@
-import {IphoneInt} from "./device";
+import {IphoneInt} from "./DevicesInterface";
 export class DeviceData {
+
+
 
   iphone13ProMax: IphoneInt = {
     deviceName: 'iPhone 13 Pro Max',
@@ -14,7 +16,6 @@ export class DeviceData {
       {repairTitle: 'Other Repairs?',repairImg: 'assets/iphone/electriciphone.png'},
     ]
   };
-
   iphone13Pro: IphoneInt = {
     deviceName: 'iPhone 13 Pro',
     deviceImg: 'assets/iphone/iphone13.png',
@@ -168,5 +169,10 @@ export class DeviceData {
       {repairTitle: 'Other Repairs?',repairImg: 'assets/iphone/electriciphone.png'},
     ]
   };
+
+   getDevices(){
+     let arr : Array<IphoneInt> = [this.iphone13ProMax, this.iphone13Pro, this.iphone13, this.iphone13Mini, this.iphone12ProMax, this.iphone12Pro, this.iphone12, this.iphone12Mini, this.iphoneSE, this.iphone11Pro, this.iphone11, this.iphoneEtc];
+     return arr;
+   }
 
 }

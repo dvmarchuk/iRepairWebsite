@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {IpadInterface, IphoneInt} from "./devices/device";
+import {IpadInterface, IphoneInt} from "./devices/DevicesInterface";
 import {DeviceData} from "./devices/DeviceData";
 
 
@@ -11,14 +11,10 @@ import {DeviceData} from "./devices/DeviceData";
 export class AppComponent {
   title = 'iRepairSiteAngular';
   showRepair: boolean = false;
-  // public iphones: any;
 
-  // constructor(private deviceData: DeviceData) {
-  //
-  // }
+  iphonesArray : Array<IphoneInt> = new DeviceData().getDevices();
 
-
-  iphones = [iphone13ProMax, iphone13Pro, iphone13, iphone13Mini, iphone12ProMax, iphone12Pro, iphone12, iphone12Mini, iphoneSE, iphone11Pro, iphone11, iphoneEtc];
+  iphones = this.iphonesArray;
   ipads = [ipadPro112021]
   androidPhones = [iphoneEtc]
   androidTablets = [iphoneEtc]
@@ -30,6 +26,8 @@ export class AppComponent {
 }
 
   test() {
+    // console.log(this.iphoneTest);
+    console.log(this.iphones)
     console.log("potato")
   }
 }
