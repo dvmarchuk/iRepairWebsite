@@ -4,7 +4,7 @@ interface DevicesInterface {
   deviceImg?: string,
 }
 
-export interface IphoneInt{
+export interface IphoneInterface{
   deviceName?: string;
   deviceImg?: string;
   repairId?: string ;
@@ -12,6 +12,34 @@ export interface IphoneInt{
 }
 
 export interface IpadInterface{
+  deviceName?: string;
+  deviceImg?: string;
+  repairId?: string ;
+  repair?: Repair[];
+}
+
+export interface AndroidPhoneInterface{
+  deviceName?: string;
+  deviceImg?: string;
+  repairId?: string ;
+  repair?: Repair[];
+}
+
+export interface AndroidTabletInterface{
+  deviceName?: string;
+  deviceImg?: string;
+  repairId?: string ;
+  repair?: Repair[];
+}
+
+export interface ComputerInterface{
+  deviceName?: string;
+  deviceImg?: string;
+  repairId?: string ;
+  repair?: Repair[];
+}
+
+export interface WatchInterface{
   deviceName?: string;
   deviceImg?: string;
   repairId?: string ;

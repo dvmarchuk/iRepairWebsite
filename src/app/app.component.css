@@ -30,6 +30,10 @@ margin {
   align-items: center;
 }
 
+.annoying-imgs {
+  object-fit: contain;
+}
+
 .card {
   border: transparent;
 }
