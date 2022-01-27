@@ -1,8 +1,9 @@
 import {Component, OnInit} from '@angular/core';
-import {IpadInterface, IphoneInterface, WatchInterface} from "./devices/DevicesInterface";
+import {ComputerInterface, IpadInterface, IphoneInterface, WatchInterface} from "./devices/DevicesInterface";
 import {IphoneData} from "./devices/IphoneData";
 import {IpadData} from "./devices/IpadData";
 import {WatchData} from "./devices/WatchData";
+import {PcData} from "./devices/PcData";
 
 
 @Component({
@@ -23,7 +24,9 @@ export class AppComponent {
 
   androidPhones = [iphoneEtc]
   androidTablets = [iphoneEtc]
-  computers = [iphoneEtc]
+
+  macArray: Array<ComputerInterface> = new PcData().getDevices();
+  computers = this.macArray;
 
   watchArray: Array<WatchInterface> = new WatchData().getDevices();
   watches = this.watchArray;

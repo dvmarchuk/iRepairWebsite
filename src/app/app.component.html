@@ -311,7 +311,7 @@ ANDROID Tablet REPAIR
       <!--    Iteration for device-->
       <ng-container *ngFor="let computer of computers" >
         <div class="card-formatting-devices card col-6 col-md-3 text-center">
-          <img src="{{computer.deviceImg}}" class="img-product-details card-img-top" alt="...">
+          <img src="{{computer.deviceImg}}" class="annoying-imgs card-img-top" alt="...">
           <div class="card-body">
             <button class="btn card-text stretched-link" type="button" data-bs-toggle="collapse" [attr.data-bs-target]="'#' + computer.repairId">
               {{computer.deviceName}}
@@ -321,7 +321,7 @@ ANDROID Tablet REPAIR
 
         <!--      REPAIR DATA-->
         <div class=" img-fluid repair-info-div card-formatting-devices collapse justify-content-center" style="padding-bottom: 20vh" id="{{computer.repairId}}">
-          <h3 class="card-title " style="padding-bottom: 48px; padding-top: 24px">{{computer.deviceName}} Repair Cost: <p style="font-size: medium">Select repair</p></h3>
+          <h3 class="card-title " style="padding-bottom: 48px; padding-top: 24px">{{computer.deviceName}}</h3>
 
           <div class="row justify-content-center">
             <div *ngFor="let repair of computer.repair"  class="card-formatting-repairs card col-md-6 col-lg-4 col-12 text-center">
@@ -329,7 +329,7 @@ ANDROID Tablet REPAIR
               <div class="card-body ">
                 <h5 class="card-title">{{repair.repairTitle}} {{repair.repairPrice}}</h5>
                 <p>{{repair.repairDetails}}</p>
-                <a class="btn"><a class="nav-link active stretched-link" aria-current="page" href="sms:+15404215581&body=Hi! I would like to get my {{repair.repairTitle}} replaced. Can I schedule an appointment?"></a></a>
+                <a class="btn"><a class="nav-link active stretched-link" aria-current="page" href="sms:+15404215581&body=Hi! I would like to get my computer repaired. Can I schedule an appointment?"></a></a>
               </div>
             </div>
           </div>
