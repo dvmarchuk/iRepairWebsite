@@ -18,7 +18,7 @@ export class WatchData{
     repairId: 'iWatchSeries7_45',
     repair: [
       {repairTitle: 'Screen', repairDetails: 'OLED Screen', repairImg: 'assets/watch/screen.png', repairPrice: '$335.00'},
-      {repairTitle: 'Other repairs?', repairDetails: '', repairImg: 'assets/watch/i.png', repairPrice: ''}
+      {repairTitle: 'Other repairs?', repairDetails: 'Contact us!', repairImg: 'assets/watch/i.png', repairPrice: ''}
 
     ]
   }
@@ -30,7 +30,7 @@ export class WatchData{
     repairId: 'iWatchSeries7_41',
     repair: [
       {repairTitle: 'Screen', repairDetails: 'OLED Screen', repairImg: 'assets/watch/screen.png', repairPrice: '$365.00'},
-      {repairTitle: 'Other repairs?', repairDetails: '', repairImg: 'assets/watch/i.png', repairPrice: ''}
+      {repairTitle: 'Other repairs?', repairDetails: 'Contact us!', repairImg: 'assets/watch/i.png', repairPrice: ''}
 
     ]
   }
@@ -42,7 +42,7 @@ export class WatchData{
     repairId: 'iWatchSeries6_44',
     repair: [
       {repairTitle: 'Screen', repairDetails: 'OLED Screen', repairImg: 'assets/watch/screen.png', repairPrice: '$195.95'},
-      {repairTitle: 'Other repairs?', repairDetails: '', repairImg: 'assets/watch/i.png', repairPrice: ''}
+      {repairTitle: 'Other repairs?', repairDetails: 'Contact us!', repairImg: 'assets/watch/i.png', repairPrice: ''}
 
     ]
   }
@@ -53,7 +53,7 @@ export class WatchData{
     repairId: 'iWatchSeries6_40',
     repair: [
       {repairTitle: 'Screen', repairDetails: 'OLED Screen', repairImg: 'assets/watch/screen.png', repairPrice: '$195.95'},
-      {repairTitle: 'Other repairs?', repairDetails: '', repairImg: 'assets/watch/i.png', repairPrice: ''}
+      {repairTitle: 'Other repairs?', repairDetails: 'Contact us!', repairImg: 'assets/watch/i.png', repairPrice: ''}
 
     ]
   }
@@ -65,7 +65,7 @@ export class WatchData{
     repairId: 'iWatchSeriesSE_40',
     repair: [
       {repairTitle: 'Screen', repairDetails: 'OLED Screen', repairImg: 'assets/watch/screen.png', repairPrice: '$195.95'},
-      {repairTitle: 'Other repairs?', repairDetails: '', repairImg: 'assets/watch/i.png', repairPrice: ''}
+      {repairTitle: 'Other repairs?', repairDetails: 'Contact us!', repairImg: 'assets/watch/i.png', repairPrice: ''}
 
     ]
   }
@@ -76,7 +76,7 @@ export class WatchData{
     repairId: 'iWatchSeriesS5_44',
     repair: [
       {repairTitle: 'Screen', repairDetails: 'OLED Screen', repairImg: 'assets/watch/screen.png', repairPrice: '$214.95'},
-      {repairTitle: 'Other repairs?', repairDetails: '', repairImg: 'assets/watch/i.png', repairPrice: ''}
+      {repairTitle: 'Other repairs?', repairDetails: 'Contact us!', repairImg: 'assets/watch/i.png', repairPrice: ''}
 
     ]
   }
@@ -87,7 +87,7 @@ export class WatchData{
     repairId: 'iWatchSeriesS5_40',
     repair: [
       {repairTitle: 'Screen', repairDetails: 'OLED Screen', repairImg: 'assets/watch/screen.png', repairPrice: '$195.95'},
-      {repairTitle: 'Other repairs?', repairDetails: '', repairImg: 'assets/watch/i.png', repairPrice: ''}
+      {repairTitle: 'Other repairs?', repairDetails: 'Contact us!', repairImg: 'assets/watch/i.png', repairPrice: ''}
 
     ]
   }
@@ -98,7 +98,7 @@ export class WatchData{
     repairId: 'iWatchSeriesS4_44',
     repair: [
       {repairTitle: 'Screen', repairDetails: 'OLED Screen', repairImg: 'assets/watch/screen.png', repairPrice: '$264.95'},
-      {repairTitle: 'Other repairs?', repairDetails: '', repairImg: 'assets/watch/i.png', repairPrice: ''}
+      {repairTitle: 'Other repairs?', repairDetails: 'Contact us!', repairImg: 'assets/watch/i.png', repairPrice: ''}
 
     ]
   }
@@ -109,7 +109,7 @@ export class WatchData{
     repairId: 'iWatchSeriesS4_40',
     repair: [
       {repairTitle: 'Screen', repairDetails: 'OLED Screen', repairImg: 'assets/watch/screen.png', repairPrice: '$195.95'},
-      {repairTitle: 'Other repairs?', repairDetails: '', repairImg: 'assets/watch/i.png', repairPrice: ''}
+      {repairTitle: 'Other repairs?', repairDetails: 'Contact us!', repairImg: 'assets/watch/i.png', repairPrice: ''}
 
     ]
   }
@@ -120,7 +120,7 @@ export class WatchData{
     repairId: 'iWatchSeriesS3_42',
     repair: [
       {repairTitle: 'Screen', repairDetails: 'OLED Screen', repairImg: 'assets/watch/screen.png', repairPrice: '$129.95'},
-      {repairTitle: 'Other repairs?', repairDetails: '', repairImg: 'assets/watch/i.png', repairPrice: ''}
+      {repairTitle: 'Other repairs?', repairDetails: 'Contact us!', repairImg: 'assets/watch/i.png', repairPrice: ''}
     ]
   }
 
@@ -130,7 +130,7 @@ export class WatchData{
     repairId: 'iWatchSeriesS3_38',
     repair: [
       {repairTitle: 'Screen', repairDetails: 'OLED Screen', repairImg: 'assets/watch/screen.png', repairPrice: '$134.95'},
-      {repairTitle: 'Other repairs?', repairDetails: '', repairImg: 'assets/watch/i.png', repairPrice: ''}
+      {repairTitle: 'Other repairs?', repairDetails: 'Contact us!', repairImg: 'assets/watch/i.png', repairPrice: ''}
     ]
   }
 

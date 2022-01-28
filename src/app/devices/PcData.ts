@@ -8,7 +8,7 @@ export class PcData{
         deviceImg: 'assets/Macbook/macbook.png',
         repairId: 'macbook',
         repair: [
-          {repairTitle: '', repairDetails: 'We offer various repair such as screen repair, keyboard repair, port repair, etc. Pricing varies depending on the macbook model, year, and on the repair you need to do. Call or text us for a quote!', repairImg: 'assets/Macbook/macbook.png', repairPrice: ''}
+          {repairTitle: '', repairDetails: 'We offer various repair such as screen repair, battery replacement, keyboard repair, port repair, etc. Pricing varies depending on the macbook model, year, and on the repair you need to do. Call or text us for an instant quote!', repairImg: 'assets/Macbook/macbook.png', repairPrice: ''}
         ]
       }
 
@@ -17,7 +17,7 @@ export class PcData{
     deviceImg: 'assets/Macbook/windows.png',
     repairId: 'windows',
     repair: [
-      {repairTitle: '', repairDetails: 'We offer various repair such as screen repair, keyboard repair, port repair, etc. Pricing varies depending on the computer model, year, and on the repair you need to do. Call or text us for a quote!', repairImg: 'assets/Macbook/windows.png', repairPrice: ''}
+      {repairTitle: '', repairDetails: 'We offer various repair such as screen repair, battery replacement, keyboard repair, port repair, etc. Pricing varies depending on the computer model, year, and on the repair you need to do. Call or text us for an instant quote!', repairImg: 'assets/Macbook/windows.png', repairPrice: ''}
     ]
   }
 

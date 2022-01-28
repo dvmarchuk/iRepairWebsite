@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {
+  AndroidPhoneInterface,
   AndroidTabletInterface,
   ComputerInterface,
   IpadInterface,
@@ -11,6 +12,7 @@ import {IpadData} from "./devices/IpadData";
 import {WatchData} from "./devices/WatchData";
 import {PcData} from "./devices/PcData";
 import {AndroidTabletData} from "./devices/AndroidTabletData";
+import {AndroidData} from "./devices/AndroidData";
 
 
 @Component({
@@ -28,7 +30,8 @@ export class AppComponent {
   ipadArray : Array<IpadInterface> = new IpadData().getDevices();
   ipads = this.ipadArray;
 
-  androidPhones = [iphoneEtc]
+  androidPhoneArray: Array<AndroidPhoneInterface> = new AndroidData().getDevices();
+  androidPhones = this.androidPhoneArray;
 
   androidTabletArray: Array<AndroidTabletInterface> = new AndroidTabletData().getDevices();
   androidTablets = this.androidTabletArray;
@@ -42,25 +45,4 @@ export class AppComponent {
   showRepairBool(){
     this.showRepair = !this.showRepair;
 }
-
-  test() {
-
-  }
 }
-
-
-
-
-let iphoneEtc: IphoneInterface = {
-  deviceName: 'iPhone 10, 8, 7, 6, etc',
-  deviceImg: 'assets/iphone/iphone-x-png-29472.png',
-  repairId: 'IphoneEtc',
-  repair: [
-    {repairTitle:'Screen', repairDetails: 'Original Apple OLED screen', repairImg: 'assets/iphone/brokenScreen.png',repairPrice: '$995'},
-    {repairTitle:'Rear Screen', repairImg: 'assets/iphone/rearCrack.png',repairPrice: '$995'},
-    {repairTitle: 'Rear/Front Camera', repairImg: 'assets/iphone/camera2.png',repairPrice: '$995'},
-    {repairTitle:'Charger Port', repairImg: 'assets/iphone/chargerPort.png',repairPrice: '$995'},
-    {repairTitle:'Battery Replacement', repairImg: 'assets/iphone/battery3.png',repairPrice: '$195'},
-    {repairTitle: 'Other Repairs?',repairImg: 'assets/iphone/electriciphone.png'},
-  ]
-};
