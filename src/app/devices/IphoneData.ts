@@ -284,7 +284,7 @@ export class IphoneData {
   iphone7: IphoneInterface = {
     deviceName: 'iPhone 7',
     deviceImg: 'assets/iphone/iphone7.png',
-    repairId: 'Iphone8',
+    repairId: 'Iphone7',
     repair: [
       {repairTitle:'Screen:', repairDetails: '', repairImg: 'assets/iphone/brokenScreen.png',repairPrice: '$78'},
       {repairTitle:'Rear Screen:', repairImg: 'assets/iphone/rearCrack.png',repairPrice: '$75.00'},

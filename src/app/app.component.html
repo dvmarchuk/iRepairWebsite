@@ -1,7 +1,9 @@
 <body style="background-color: #e5e5e5">
-<div style="background-color: #e5e5e5">
-<div style="height: 100vh;  background-image: url('https://mdbcdn.b-cdn.net/img/Photos/Others/images/76.webp');"   class="bg-image">
-  <nav class="navbar navbar-expand-sm navbar-light bg-light " >
+<div class="container-fluid" style="background-color: #e5e5e5">
+
+  <div class="row-4">
+    <div style="height: 100vh; margin: 0 -15px 0 -15px; background-image: url('assets/bg.jpg');"   class="bg-image">
+      <nav class="navbar navbar-expand-sm navbar-light bg-light " >
     <div class="container-fluid" style="background-color: transparent !important;">
       <a class="navbar-brand" href="#">iRepair</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -31,25 +33,28 @@
       </div>
     </div>
   </nav>
-  <div style="background-color: transparent !important; padding-top: 24px" class="text-center position-absolute top-50 start-50 translate-middle" >
+    <div style="background-color: transparent !important; padding-top: 24px" class="text-center position-absolute top-50 start-50 translate-middle" >
     <h1>iRepair</h1>
-    <h4 style="margin-bottom: 24px">Harrisonburg's oldest and best Phone & PC Repair Shop.</h4>
+    <h5 style="margin-bottom: 24px">Harrisonburg's original professional Phone & PC Repair Shop.</h5>
     <a style="margin-right: 8px" class="btn btn-outline-dark" href="#repair">Repair</a>
     <a class="btn btn-outline-dark" href="#purchase">Purchase</a>
   </div>
-</div>
+    </div>
+  </div>
 
-<div id="repair" class="container" style=" padding-top: 24px; height: 50vh; text-align: center" >
+
+  <div class="row-4">
+    <div id="repair" class="container" style=" padding-top: 24px; height: 50vh; text-align: center" >
   <h1>Device Repair</h1>
   <p></p>
   <h5 style="padding-bottom: 96px">All your electronics are welcome! We have the tool and expertize your device needs.</h5>
   <!--  device repair option-->
-  <div class="d-flex justify-content-center row img-fluid" >
+  <div class="d-flex justify-content-center row img-fluid panel-group" >
 
     <div class="card-formatting card col-md-4 col-6" style="align-items: center"  >
       <img class="img-fluid img-size card-img-top" src="assets/iphone/iphone13.png" alt="...">
       <div class="card-body">
-        <button onclick="location.href='#iphoneRepair'" class="btn card-text stretched-link" type="button" data-bs-toggle="collapse" data-bs-target="#iphoneRepair" aria-expanded="false" aria-controls="collapseExample">
+        <button onclick="location.href='#iphoneRepair'" class="btn card-text stretched-link" type="button"  data-bs-toggle="collapse" data-bs-target="#iphoneRepair" aria-expanded="false" aria-controls="collapseExample">
           iPhone Repair
         </button>
       </div>
@@ -104,27 +109,27 @@
 
 
 <!--DevicesInterface show hide panels-->
-  <div style="height: 50vh" class="container-fluid">
+<div  style="height: 50vh" class="container-fluid" id="chooseDevice">
 
 
   <!--  iPhone Repair-->
 
-  <div class="px-lg-5 collapse justify-content-center row dropdown img-fluid" style=" padding-top: 48px" id="iphoneRepair">
+  <div class="px-lg-5 collapse justify-content-center row dropdown img-fluid" data-bs-parent="#chooseDevice" style=" padding-top: 48px" id="iphoneRepair">
   <h1 style="padding-bottom: 96px">Select iPhone</h1>
 
 <!--    Iteration for device-->
-  <ng-container *ngFor="let iphone of iphones"  >
-     <div class="card-formatting-devices card col-6 col-md-3 text-center" data-bs-parent="iphoneRepair">
+  <ng-container *ngFor="let iphone of iphones" >
+     <div class="card-formatting-devices card col-6 col-md-3 text-center" >
       <img src="{{iphone.deviceImg}}" class="img-product-details card-img-top" alt="...">
        <div class="card-body">
-      <button class="btn card-text stretched-link" type="button" data-bs-parent="#myGroup" data-bs-toggle="collapse" [attr.data-bs-target]="'#' + iphone.repairId">
+      <button class="btn card-text stretched-link" type="button"  data-bs-toggle="collapse" [attr.data-bs-target]="'#' + iphone.repairId">
         {{iphone.deviceName}}
       </button>
      </div>
     </div>
 
 <!--      REPAIR DATA-->
-     <div class=" img-fluid repair-info-div card-formatting-devices collapse justify-content-center" style="padding-bottom: 20vh" id="{{iphone.repairId}}">
+     <div class="img-fluid repair-info-div card-formatting-devices collapse justify-content-center" data-bs-parent="#iphoneRepair" style="padding-bottom: 20vh" id="{{iphone.repairId}}">
       <h3 class="card-title " style="padding: 48px 0 48px 0;">{{iphone.deviceName}} Repair Cost: <p style="font-size: medium">Select the repair you are interested in to schedule an appointment!</p></h3>
 
       <div class="row justify-content-center">
@@ -133,6 +138,7 @@
           <div class="card-body ">
             <h5 class="card-title">{{repair.repairTitle}} {{repair.repairPrice}}</h5>
             <p>{{repair.repairDetails}}</p>
+
             <a class="btn"><a class="nav-link active stretched-link" aria-current="page" href="sms:+15404215581&body=Hi! I would like to get my {{iphone.deviceName}} {{repair.repairTitle}} repaired. Can I schedule an appointment?"></a></a>
           </div>
         </div>
@@ -159,10 +165,8 @@
 
 
 
-
-
     <!--  Ipad Repair-->
-    <div class="px-lg-5 collapse justify-content-center row dropdown img-fluid" style=" padding-top: 48px" id="ipadRepair">
+  <div class="px-lg-5 collapse justify-content-center row dropdown img-fluid" data-bs-parent="#chooseDevice" style=" padding-top: 48px" id="ipadRepair">
       <h1 style="padding-bottom: 96px">Select iPad</h1>
 
       <!--    Iteration for device-->
@@ -177,7 +181,7 @@
         </div>
 
         <!--      REPAIR DATA-->
-        <div class=" img-fluid repair-info-div card-formatting-devices collapse justify-content-center" style="padding-bottom: 20vh" id="{{ipad.repairId}}">
+        <div class=" img-fluid repair-info-div card-formatting-devices collapse justify-content-center" data-bs-parent="#ipadRepair" style="padding-bottom: 20vh" id="{{ipad.repairId}}">
           <h3 class="card-title " style="padding-bottom: 48px; padding-top: 24px">{{ipad.deviceName}} Repair Cost: <p style="font-size: medium">Select repair</p></h3>
 
           <div class="row justify-content-center">
@@ -213,7 +217,7 @@
 
 
   -->
-    <div class="px-lg-5 collapse justify-content-center row dropdown img-fluid" style=" padding-top: 48px" id="AndroidRepair">
+    <div class="px-lg-5 collapse justify-content-center row dropdown img-fluid" data-bs-parent="#chooseDevice" style=" padding-top: 48px" id="AndroidRepair">
       <h1 style="padding-bottom: 96px">Select Phone</h1>
 
       <!--    Iteration for device-->
@@ -228,7 +232,7 @@
         </div>
 
         <!--      REPAIR DATA-->
-        <div class=" img-fluid repair-info-div card-formatting-devices collapse justify-content-center" style="padding-bottom: 20vh" id="{{android.repairId}}">
+        <div class=" img-fluid repair-info-div card-formatting-devices collapse justify-content-center" data-bs-parent="#AndroidRepair" style="padding-bottom: 20vh" id="{{android.repairId}}">
           <h3 class="card-title " style="padding-bottom: 48px; padding-top: 24px">{{android.deviceName}} Repair Cost: <p style="font-size: medium">Select repair</p></h3>
 
           <div class="row justify-content-center">
@@ -261,7 +265,7 @@
 ANDROID Tablet REPAIR
 
 -->
-    <div class="px-lg-5 collapse justify-content-center row dropdown img-fluid" style=" padding-top: 48px" id="AndroidTabletRepair">
+    <div class="px-lg-5 collapse justify-content-center row dropdown img-fluid" data-bs-parent="#chooseDevice" style=" padding-top: 48px" id="AndroidTabletRepair">
       <h1 style="padding-bottom: 96px">Select Tablet</h1>
 
       <!--    Iteration for device-->
@@ -276,7 +280,7 @@ ANDROID Tablet REPAIR
         </div>
 
         <!--      REPAIR DATA-->
-        <div class=" img-fluid repair-info-div card-formatting-devices collapse justify-content-center" style="padding-bottom: 20vh" id="{{androidTablet.repairId}}">
+        <div class=" img-fluid repair-info-div card-formatting-devices collapse justify-content-center" data-bs-parent="#AndroidTabletRepair" style="padding-bottom: 20vh" id="{{androidTablet.repairId}}">
           <h3 class="card-title " style="padding-bottom: 48px; padding-top: 24px">{{androidTablet.deviceName}}</h3>
 
           <div class="row justify-content-center">
@@ -305,7 +309,7 @@ ANDROID Tablet REPAIR
 
 
   <!--Mac/PC Repair-->
-    <div class="px-lg-5 collapse justify-content-center row dropdown img-fluid" style=" padding-top: 48px" id="PcRepair">
+    <div class="px-lg-5 collapse justify-content-center row dropdown img-fluid" data-bs-parent="#chooseDevice" style=" padding-top: 48px" id="PcRepair">
       <h1 style="padding-bottom: 96px">Select Computer</h1>
 
       <!--    Iteration for device-->
@@ -320,7 +324,7 @@ ANDROID Tablet REPAIR
         </div>
 
         <!--      REPAIR DATA-->
-        <div class=" img-fluid repair-info-div card-formatting-devices collapse justify-content-center" style="padding-bottom: 20vh" id="{{computer.repairId}}">
+        <div class=" img-fluid repair-info-div card-formatting-devices collapse justify-content-center" data-bs-parent="#PcRepair" style="padding-bottom: 20vh" id="{{computer.repairId}}">
           <h3 class="card-title " style="padding-bottom: 48px; padding-top: 24px">{{computer.deviceName}}</h3>
 
           <div class="row justify-content-center">
@@ -351,7 +355,7 @@ ANDROID Tablet REPAIR
 
 
   <!--Watch Repair-->
-    <div class="px-lg-5 collapse justify-content-center row dropdown img-fluid" style=" padding-top: 48px" id="WatchRepair">
+    <div class="px-lg-5 collapse justify-content-center row dropdown img-fluid" data-bs-parent="#chooseDevice" style=" padding-top: 48px" id="WatchRepair">
       <h1 style="padding-bottom: 96px">Select Watch</h1>
 
       <!--    Iteration for device-->
@@ -366,7 +370,7 @@ ANDROID Tablet REPAIR
         </div>
 
         <!--      REPAIR DATA-->
-        <div class=" img-fluid repair-info-div card-formatting-devices collapse justify-content-center" style="padding-bottom: 20vh" id="{{watch.repairId}}">
+        <div class=" img-fluid repair-info-div card-formatting-devices collapse justify-content-center" data-bs-parent="#WatchRepair" style="padding-bottom: 20vh" id="{{watch.repairId}}">
           <h3 class="card-title " style="padding-bottom: 48px; padding-top: 24px">{{watch.deviceName}} Repair Cost: <p style="font-size: medium">Select repair</p></h3>
 
           <div class="row justify-content-center">
@@ -394,37 +398,40 @@ ANDROID Tablet REPAIR
 
   </div>
 </div>
+  </div>
 
 
 <!--DEVICES For SALE-->
-<div class="text-center " style="padding-top: 7000px">
-  <div id="purchase"  >
-    <h3>Devices for Sale</h3>
-    <br>
-    <p>Looking for a quality used phone? Look no further than iRepair! We sell new and quality used phones and iPads. Devices in stock are available for immediate pickup.</p>
-    <p>Looking for something we don't have listed? We can order certain devices just for you!</p>
-    <p>With unbeatable prices and service, choose us for your next Smart device!</p>
-    <p>Call us today to see if we have the iPhone, iPad, Android, or computer you are searching for</p>
-  </div>
-
-  <div style="margin-top: 160px" id="aboutUs">
-    <h3>About Us</h3>
-    <p>We are a locally owned and operated iPhone repair shop that started back in 2014. We have qualified technicians that are
-      happy to assist you and repair your device</p>
-  </div>
-
-  <div style="margin-top: 160px" id="contact">
-    <h3>Contact</h3>
-    <p>Have a question? Need help? Get in touch with us by calling, stopping by</p>
-    <p></p>
-    <p></p>
-    <div class="justify-content-evenly">
-      <button style="margin-right: 8px; font-size: large" class="btn btn-outline-secondary"><a class="nav-link active" aria-current="page" href="tel:+15404215581">Call</a></button>
-      <button style=" font-size: large" class="btn btn-outline-dark"><a class="nav-link active" aria-current="page" href="sms:+15404215581">Text</a></button>
+<!--  style="padding-top: 4500px"-->
+  <div class="row-4">
+    <div class="text-center row " style="padding-top: 75vh">
+      <div id="purchase"  >
+      <h3>Devices for Sale</h3>
+      <br>
+      <p>Looking for a quality used phone? Look no further than iRepair! We sell new and quality used phones and iPads. Devices in stock are available for immediate pickup.</p>
+      <p>Looking for something we don't have listed? We can order certain devices just for you!</p>
+      <p>With unbeatable prices and service, choose us for your next Smart device!</p>
+      <p>Call us today to see if we have the iPhone, iPad, Android, or computer you are searching for!</p>
     </div>
-  </div>
 
-  <div class="position-relative" style="margin-top: 160px" id="location">
+      <div style="margin-top: 160px" id="aboutUs">
+      <h3>About Us</h3>
+      <p>We are a locally owned and operated iPhone repair shop that started back in 2014. We have qualified technicians that are
+        happy to assist you and repair your device</p>
+    </div>
+
+      <div style="margin-top: 160px" id="contact">
+      <h3>Contact</h3>
+      <p>Have a question? Need help? Get in touch with us by calling, stopping by</p>
+      <p></p>
+      <p></p>
+      <div class="justify-content-evenly">
+        <button style="margin-right: 8px; font-size: large" class="btn btn-outline-secondary"><a class="nav-link active" aria-current="page" href="tel:+15404215581">Call</a></button>
+        <button style=" font-size: large" class="btn btn-outline-dark"><a class="nav-link active" aria-current="page" href="sms:+15404215581">Text</a></button>
+      </div>
+    </div>
+
+      <div class="position-relative" style="margin-top: 160px" id="location">
     <h3>Location</h3>
     <div class=" mapouter" style="">
 <!--      position-absolute top-75 start-50-->
@@ -432,7 +439,9 @@ ANDROID Tablet REPAIR
 <!--        <style>.mapouter{text-align:center;height:350px;width:350px;}</style>-->
     </div>
   </div>
-</div>
+    </div>
+  </div>
+
 </div>
 </body>
 
