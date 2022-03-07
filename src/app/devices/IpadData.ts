@@ -136,7 +136,7 @@ export class IpadData{
     deviceImg: 'assets/iPad/ipadPro2021.png',
     repairId: 'iPadOther',
     repair: [
-      {repairTitle: 'Contact us for your repairs', repairDetails: 'Due to supply chain and pricing of parts, these repairs are done to order', repairImg: '', repairPrice: 'Call in!'}
+      {repairTitle: 'Contact us for your repairs', repairDetails: 'Due to supply chain and pricing of parts, these repairs are done to order', repairImg: 'assets/watch/i.png', repairPrice: 'Call in!'}
     ]
   }
 

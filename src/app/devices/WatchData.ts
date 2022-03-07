@@ -3,14 +3,6 @@ import {WatchInterface} from "./DevicesInterface";
 export class WatchData{
 
 
-// : IpadInterface = {
-//     deviceName: '',
-//     deviceImg: '',
-//     repairId: '',
-//     repair: [
-//       {repairTitle: '', repairDetails: '', repairImg: '', repairPrice: ''}
-//     ]
-//   }
 
   iWatchSeries7_45: WatchInterface = {
     deviceName: 'iWatch Series 7 45mm',

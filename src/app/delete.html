@@ -1,0 +1,111 @@
+<body style="background-color: #e5e5e5">
+<div class="container-fluid" style="background-color: #e5e5e5">
+
+
+  <div class="row">
+    <div id="repair" class="container" style=" padding-top: 24px; height: 50vh; text-align: center" >
+      <h1>Device Repair</h1>
+      <p></p>
+      <h5 style="padding-bottom: 96px">All your electronics are welcome! We have the tool and expertize your device needs.</h5>
+      <!--  device repair option-->
+      <div class="d-flex justify-content-center row img-fluid panel-group" >
+
+        <div class="card-formatting card col-md-4 col-6" style="align-items: center"  >
+          <img class="img-fluid img-size card-img-top" src="assets/iphone/iphone13.png" alt="...">
+          <div class="card-body">
+            <button onclick="location.href='#iphoneRepair'" class="btn card-text stretched-link" type="button"  data-bs-toggle="collapse" data-bs-target="#iphoneRepair" aria-expanded="false" aria-controls="collapseExample">
+              iPhone Repair
+            </button>
+          </div>
+        </div>
+
+
+        <div class="card-formatting card col-md-4 col-6" style="align-items: center">
+          <img class="img-fluid img-size card-img-top" src="assets/iPad/ipadPro2021.png" alt="...">
+          <div class="card-body">
+            <button onclick="location.href='#ipadRepair'" class="btn card-text stretched-link" type="button" data-bs-toggle="collapse" data-bs-target="#ipadRepair" aria-expanded="false" aria-controls="collapseExample">
+              iPad Repair
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+
+      <!--DevicesInterface show hide panels-->
+      <div  style="height: 50vh" class="container-fluid" id="chooseDevice">
+
+
+        <!--  iPhone Repair-->
+
+        <div class="px-lg-5 collapse justify-content-center row dropdown img-fluid" data-bs-parent="#chooseDevice" style=" padding-top: 48px" id="iphoneRepair">
+          <h1 style="padding-bottom: 96px">Select iPhone</h1>
+
+          <!--    Iteration for device-->
+          <ng-container *ngFor="let iphone of iphones" >
+            <div class="card-formatting-devices card col-6 col-md-3 text-center" >
+              <img src="{{iphone.deviceImg}}" class="img-product-details card-img-top" alt="...">
+              <div class="card-body">
+                <button class="btn card-text stretched-link" type="button"  data-bs-toggle="collapse" [attr.data-bs-target]="'#' + iphone.repairId">
+                  {{iphone.deviceName}}
+                </button>
+              </div>
+            </div>
+
+            <!--      REPAIR DATA-->
+            <div class="img-fluid repair-info-div card-formatting-devices collapse justify-content-center" data-bs-parent="#iphoneRepair" style="padding-bottom: 20vh" id="{{iphone.repairId}}">
+              <h3 class="card-title " style="padding: 48px 0 48px 0;">{{iphone.deviceName}} Repair Cost: <p style="font-size: medium">Select the repair you are interested in to schedule an appointment!</p></h3>
+
+              <div class="row justify-content-center">
+                <div *ngFor="let repair of iphone.repair"  class="card-formatting-repairs card col-md-6 col-lg-4  col-12 text-center">
+                  <img src="{{repair.repairImg}}" class="card-img-repairs card-img-top img-fluid " alt="...">
+                  <div class="card-body ">
+                    <h5 class="card-title">{{repair.repairTitle}} {{repair.repairPrice}}</h5>
+                    <p>{{repair.repairDetails}}</p>
+
+                    <a class="btn"><a class="nav-link active stretched-link" aria-current="page" href="sms:+15404215581&body=Hi! I would like to get my {{iphone.deviceName}} {{repair.repairTitle}} repaired. Can I schedule an appointment?"></a></a>
+                  </div>
+                </div>
+              </div>
+
+              <p></p>
+              <p></p>
+              <div class="justify-content-evenly">
+                <h3 style="padding-bottom: 16px">Schedule your service!</h3>
+                <button style="margin-right: 8px; font-size: large" class="btn btn-outline-secondary"><a class="nav-link active" aria-current="page" href="tel:+15404215581">Call</a></button>
+                <button style=" font-size: large" class="btn btn-outline-dark"><a class="nav-link active" aria-current="page" href="sms:+15404215581">Text</a></button>
+              </div>
+              <hr style="background-color: black; margin-top: 24px">
+
+            </div>
+
+          </ng-container>
+
+        </div>
+
+
+
+
+      </div>
+    </div>
+  </div>
+
+  <div class="row" >
+    <div class="text-center row " style="padding-top: 200px">
+      <div id="purchase"  >
+        <h3>Devices for Sale</h3>
+      </div>
+
+      <div class="position-relative" style="margin-top: 160px" id="location">
+        <h3>Location</h3>
+        <div class=" mapouter" style="">
+          <iframe width="100%" height="500px" id="gmap_canvas" src="https://maps.google.com/maps?q=924%20S%20High%20St,%20Harrisonburg,%20VA%2022801&t=&z=15&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+          <!--        <style>.mapouter{text-align:center;height:350px;width:350px;}</style>-->
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+</body>
+
