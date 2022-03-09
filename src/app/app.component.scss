@@ -4,7 +4,6 @@ div{
 
 
 
-
 .img-size{
   width: 230px; /* You can set the dimensions to whatever you want */
   height: 230px;
@@ -13,6 +12,14 @@ div{
 
 div{
   background-color: #e5e5e5;
+}
+
+.bg-color2{
+  background-color: gray;
+}
+
+.border-color2{
+  border: 2px solid gold;
 }
 
 div:before{
@@ -24,6 +31,12 @@ margin{
   background-color: #e5e5e5;
 }
 
+.test2{
+  div{
+   background-color: gray;
+  };
+
+}
 
 .img-product-details{
   width: 180px; /* You can set the dimensions to whatever you want */
@@ -32,7 +45,6 @@ margin{
 }
 
 .card-formatting{
-  /*margin: 8px;*/
   align-items: center
 }
 
