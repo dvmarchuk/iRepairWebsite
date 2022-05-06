@@ -7,7 +7,7 @@ export class AndroidData{
 
   samsungS21: AndroidPhoneInterface = {
     deviceName: 'Samsung S21',
-    deviceImg: 'assets/Android/s21-2.webp',
+    deviceImg: 'assets/Android/s21-2.png',
     repairId: 'samsungS21',
     repair: [
       {repairTitle: 'Screen Replacement:', repairDetails: 'Call in for an instant quote. Being a new phone the manufacture screen price may vary', repairImg: 'assets/iphone/brokenScreen.png', repairPrice: ''},
@@ -128,7 +128,7 @@ export class AndroidData{
 
   samsungNote9: AndroidPhoneInterface = {
     deviceName: 'Samsung Note 9',
-    deviceImg: 'assets/Android/note9.webp',
+    deviceImg: 'assets/Android/note9.png',
     repairId: 'samsungNote9',
     repair: [
       {repairTitle: 'Screen Replacement:', repairDetails: '', repairImg: 'assets/iphone/brokenScreen.png', repairPrice: '$245.95'},
