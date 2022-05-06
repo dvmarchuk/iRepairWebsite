@@ -13,12 +13,24 @@ div {
   background-color: #e5e5e5;
 }
 
+.bg-color2 {
+  background-color: gray;
+}
+
+.border-color2 {
+  border: 2px solid gold;
+}
+
 div:before {
   background-color: #e5e5e5;
 }
 
 margin {
   background-color: #e5e5e5;
+}
+
+.test2 div {
+  background-color: gray;
 }
 
 .img-product-details {
@@ -29,7 +41,6 @@ margin {
 }
 
 .card-formatting {
-  /*margin: 8px;*/
   align-items: center;
 }
 
