@@ -7,7 +7,7 @@ export class AndroidData{
 
   samsungS21: AndroidPhoneInterface = {
     deviceName: 'Samsung S21',
-    deviceImg: 'assets/Android/s21-2.webp',
+    deviceImg: 'assets/Android/s21-2.png',
     repairId: 'samsungS21',
     repair: [
       {repairTitle: 'Screen Replacement:', repairDetails: 'Call in for an instant quote. Being a new phone the manufacture screen price may vary', repairImg: 'assets/iphone/brokenScreen.png', repairPrice: ''},
