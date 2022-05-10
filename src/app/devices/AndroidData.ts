@@ -128,7 +128,7 @@ export class AndroidData{
 
   samsungNote9: AndroidPhoneInterface = {
     deviceName: 'Samsung Note 9',
-    deviceImg: 'assets/Android/note9.webp',
+    deviceImg: 'assets/Android/note9.png',
     repairId: 'samsungNote9',
     repair: [
       {repairTitle: 'Screen Replacement:', repairDetails: '', repairImg: 'assets/iphone/brokenScreen.png', repairPrice: '$245.95'},
