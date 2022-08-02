@@ -286,7 +286,7 @@ export class IphoneData {
     deviceImg: 'assets/iphone/iphone7.png',
     repairId: 'Iphone7',
     repair: [
-      {repairTitle:'Screen:', repairDetails: '', repairImg: 'assets/iphone/brokenScreen.png',repairPrice: '$78'},
+      {repairTitle:'Screen:', repairDetails: '', repairImg: 'assets/iphone/brokenScreen.png',repairPrice: '$75.00'},
       {repairTitle:'Rear Screen:', repairImg: 'assets/iphone/rearCrack.png',repairPrice: '$75.00'},
       {repairTitle:'Rear/Front Camera:', repairImg: 'assets/iphone/camera2.png',repairPrice: '$60.00 Labor + Market price for part'},
       {repairTitle:'Charger Port:', repairImg: 'assets/iphone/chargerPort.png',repairPrice: '$75.00'},
