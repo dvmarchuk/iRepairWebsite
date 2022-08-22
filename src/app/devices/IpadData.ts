@@ -51,7 +51,7 @@ export class IpadData{
     deviceImg: 'assets/iPad/ipad4.png',
     repairId: 'iPadAir',
     repair: [
-      {repairTitle: 'Screen: ', repairDetails: '', repairImg: 'assets/iPad/ipadcracked.png', repairPrice: '$95.00'},
+      {repairTitle: 'Screen: ', repairDetails: '', repairImg: 'assets/iPad/ipadcracked.png', repairPrice: '$115.00'},
       {repairTitle: 'Battery: ', repairDetails: '', repairImg: 'assets/iPad/ipadbattery.png', repairPrice: '$95.00'},
       {repairTitle: 'Repair not listed?', repairDetails: '', repairImg: 'assets/iPad/ipad4.png', repairPrice: 'Call in!'}
 
@@ -76,8 +76,8 @@ export class IpadData{
     deviceImg: 'assets/iPad/ipad9.jpg',
     repairId: 'iPad9',
     repair: [
-      {repairTitle: 'Screen: ', repairDetails: '', repairImg: 'assets/iPad/ipadcracked.png', repairPrice: '$145.00'},
-      {repairTitle: 'Battery: ', repairDetails: '', repairImg: 'assets/iPad/ipadbattery.png', repairPrice: '$135.00'},
+      {repairTitle: 'Screen: ', repairDetails: '', repairImg: 'assets/iPad/ipadcracked.png', repairPrice: '$135.00'},
+      {repairTitle: 'Battery: ', repairDetails: '', repairImg: 'assets/iPad/ipadbattery.png', repairPrice: '$115.00'},
       {repairTitle: 'Repair not listed?', repairDetails: '', repairImg: 'assets/iPad/ipad9.jpg', repairPrice: 'Call in!'}
 
     ]
@@ -89,8 +89,8 @@ export class IpadData{
     deviceImg: 'assets/iPad/ipad7.png',
     repairId: 'iPad8',
     repair: [
-      {repairTitle: 'Screen: ', repairDetails: '', repairImg: 'assets/iPad/ipadcracked.png', repairPrice: '$145.00'},
-      {repairTitle: 'Battery: ', repairDetails: '', repairImg: 'assets/iPad/ipadbattery.png', repairPrice: '$135.00'},
+      {repairTitle: 'Screen: ', repairDetails: '', repairImg: 'assets/iPad/ipadcracked.png', repairPrice: '$135.00'},
+      {repairTitle: 'Battery: ', repairDetails: '', repairImg: 'assets/iPad/ipadbattery.png', repairPrice: '$115.00'},
       {repairTitle: 'Repair not listed?', repairDetails: '', repairImg: 'assets/iPad/ipad7.png', repairPrice: 'Call in!'}
 
     ]
@@ -101,8 +101,8 @@ export class IpadData{
     deviceImg: 'assets/iPad/ipad72.png',
     repairId: 'iPad7',
     repair: [
-      {repairTitle: 'Screen: ', repairDetails: '', repairImg: 'assets/iPad/ipadcracked.png', repairPrice: '$145.00'},
-      {repairTitle: 'Battery: ', repairDetails: '', repairImg: 'assets/iPad/ipadbattery.png', repairPrice: '$135.00'},
+      {repairTitle: 'Screen: ', repairDetails: '', repairImg: 'assets/iPad/ipadcracked.png', repairPrice: '$135.00'},
+      {repairTitle: 'Battery: ', repairDetails: '', repairImg: 'assets/iPad/ipadbattery.png', repairPrice: '$115.00'},
       {repairTitle: 'Repair not listed?', repairDetails: '', repairImg: 'assets/iPad/ipad72.png', repairPrice: 'Call in!'}
 
     ]
@@ -113,8 +113,8 @@ export class IpadData{
     deviceImg: 'assets/iPad/ipad6.png',
     repairId: 'iPad6',
     repair: [
-      {repairTitle: 'Screen: ', repairDetails: '', repairImg: 'assets/iPad/ipadcracked.png', repairPrice: '$125.00'},
-      {repairTitle: 'Battery: ', repairDetails: '', repairImg: 'assets/iPad/ipadbattery.png', repairPrice: '$135.00'},
+      {repairTitle: 'Screen: ', repairDetails: '', repairImg: 'assets/iPad/ipadcracked.png', repairPrice: '$115.00'},
+      {repairTitle: 'Battery: ', repairDetails: '', repairImg: 'assets/iPad/ipadbattery.png', repairPrice: '$95.00'},
       {repairTitle: 'Repair not listed?', repairDetails: '', repairImg: 'assets/iPad/ipad6.png', repairPrice: 'Call in!'}
 
     ]
@@ -125,7 +125,7 @@ export class IpadData{
     deviceImg: 'assets/iPad/ipad5.png',
     repairId: 'iPad5',
     repair: [
-      {repairTitle: 'Screen: ', repairDetails: '', repairImg: 'assets/iPad/ipadcracked.png', repairPrice: '$95.00'},
+      {repairTitle: 'Screen: ', repairDetails: '', repairImg: 'assets/iPad/ipadcracked.png', repairPrice: '$115.00'},
       {repairTitle: 'Battery: ', repairDetails: '', repairImg: 'assets/iPad/ipadbattery.png', repairPrice: '$95.00'},
       {repairTitle: 'Repair not listed?', repairDetails: '', repairImg: 'assets/iPad/ipad5.png', repairPrice: 'Call in!'}
     ]
