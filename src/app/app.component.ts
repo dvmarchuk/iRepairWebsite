@@ -24,10 +24,10 @@ export class AppComponent {
   title = 'iRepairSiteAngular';
   showRepair: boolean = false;
 
-  iphonesArray : Array<IphoneInterface> = new IphoneData().getDevices();
+  iphonesArray: Array<IphoneInterface> = new IphoneData().getDevices();
   iphones = this.iphonesArray;
 
-  ipadArray : Array<IpadInterface> = new IpadData().getDevices();
+  ipadArray: Array<IpadInterface> = new IpadData().getDevices();
   ipads = this.ipadArray;
 
   androidPhoneArray: Array<AndroidPhoneInterface> = new AndroidData().getDevices();
@@ -42,7 +42,7 @@ export class AppComponent {
   watchArray: Array<WatchInterface> = new WatchData().getDevices();
   watches = this.watchArray;
 
-  showRepairBool(){
+  showRepairBool() {
     this.showRepair = !this.showRepair;
-}
+  }
 }
